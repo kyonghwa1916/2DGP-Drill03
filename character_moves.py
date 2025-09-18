@@ -35,7 +35,13 @@ def SquareMove():
         y -= 5
         delay(0.01)
 def TriangleMove():
-    pass
+    x = 100
+    while x < 700:
+        clear_canvas_now()
+        grass.draw_now(400, 30)
+        character.draw_now(x, 90)
+        x += 5
+        delay(0.01)
 
 def CircleMove():
     x = 400
@@ -53,7 +59,7 @@ def CircleMove():
 while True:
     #SquareMove()
     TriangleMove()
-    CircleMove()
+    #CircleMove()
     break
 
 close_canvas()
