@@ -42,6 +42,10 @@ def TriangleMove():
         character.draw_now(x, 90)
         x += 5
         delay(0.01)
+    while x > 400:
+        y = math.tan(math.radians(60))*((700-x)/2) + 90
+        x -= 1
+        character.draw_now(x, y)
 
 def CircleMove():
     x = 400
