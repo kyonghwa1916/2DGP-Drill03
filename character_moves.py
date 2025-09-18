@@ -22,7 +22,11 @@ def SquareMove():
         character.draw_now(x, 550)
         x -= 5
         delay(0.01)
-
+    y = 550
+    while y > 90:
+        character.draw_now(50, y)
+        y -= 5
+        delay(0.01)
 def TriangleMove():
     pass
 
