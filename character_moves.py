@@ -17,6 +17,11 @@ def SquareMove():
         character.draw_now(750, y)
         y += 5
         delay(0.01)
+    x = 750
+    while x > 50:
+        character.draw_now(x, 550)
+        x -= 5
+        delay(0.01)
 
 def TriangleMove():
     pass
