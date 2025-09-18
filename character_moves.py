@@ -41,11 +41,11 @@ def CircleMove():
     x = 400
     y = 300
     r = 200
-    angle = 0
-    for angle in range(0, 360):
+    rad = 0
+    while rad < 2*math.pi:
         grass.draw_now(400, 30)
-        character.draw_now(x + r*math.cos(angle), y + r*math.sin(angle))
-        angle += 1
+        character.draw_now(x + r*math.cos(rad), y + r*math.sin(rad))
+        rad += 2*math.pi/360
         delay(0.01)
 
 
