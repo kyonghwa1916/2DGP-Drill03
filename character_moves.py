@@ -38,10 +38,14 @@ def TriangleMove():
     pass
 
 def CircleMove():
-    pass
+    x = 400
+    y = 300
+    r = 200
+    grass.draw_now(400, 30)
+    character.draw_now(x + r, y)
 
 while True:
-    SquareMove()
+    #SquareMove()
     TriangleMove()
     CircleMove()
     break
