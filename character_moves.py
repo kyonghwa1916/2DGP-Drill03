@@ -43,9 +43,26 @@ def TriangleMove():
         x += 5
         delay(0.01)
     while x > 400:
-        y = math.tan(math.radians(60))*((700-x)/2) + 90
-        x -= 1
+        clear_canvas_now()
+        y = math.tan(math.radians(60))*(700 - x) + 90
+        x -= 5
+        grass.draw_now(400, 30)
         character.draw_now(x, y)
+        delay(0.01)
+    start_x = 400
+    end_x = 100
+    start_y = math.tan(math.radians(60)) * (700 - 400) + 90  # ≈ 510.96
+    end_y = 90
+    m = (end_y - start_y) / (end_x - start_x)  # 기울기
+    b = start_y - m * start_x  # y절편
+
+    while x > 100:
+        clear_canvas_now()
+        y = m * x + b
+        x -= 5
+        grass.draw_now(400, 30)
+        character.draw_now(x, y)
+        delay(0.01)
 
 def CircleMove():
     x = 400
