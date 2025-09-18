@@ -43,6 +43,7 @@ def CircleMove():
     r = 200
     rad = 0
     while rad < 2*math.pi:
+        clear_canvas_now()
         grass.draw_now(400, 30)
         character.draw_now(x + r*math.cos(rad), y + r*math.sin(rad))
         rad += 2*math.pi/360
