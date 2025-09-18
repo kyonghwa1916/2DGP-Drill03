@@ -8,8 +8,8 @@ character = pico2d.load_image('character.png')
 grass_height = grass.h
 character_height = character.h
 
-grass_top_y = 40 + grass_height // 2  # grass 중심 + 반높이 = 윗면 y좌표
-character_y_on_grass = grass_top_y + character_height // 2  # 캐릭터 중심이 grass 위에 오도록
+grass_center_y = 40  # grass 중심 y좌표
+character_y_on_grass = grass_center_y + character_height // 2  # 캐릭터 발이 grass 중심에 오도록
 
 running = True
 
