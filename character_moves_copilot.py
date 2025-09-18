@@ -96,6 +96,5 @@ while running:
         break
     if not animate_circle():
         break
-    running = False  # 한 번만 실행 후 종료
 
 pico2d.close_canvas()
