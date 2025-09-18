@@ -1,5 +1,5 @@
 from pico2d import *
-
+import math
 open_canvas()
 
 grass = load_image('grass.png')
@@ -41,8 +41,13 @@ def CircleMove():
     x = 400
     y = 300
     r = 200
-    grass.draw_now(400, 30)
-    character.draw_now(x + r, y)
+    angle = 0
+    for angle in range(0, 360):
+        grass.draw_now(400, 30)
+        character.draw_now(x + r*math.cos(angle), y + r*math.sin(angle))
+        angle += 1
+        delay(0.01)
+
 
 while True:
     #SquareMove()
